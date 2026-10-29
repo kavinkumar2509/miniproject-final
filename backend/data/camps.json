@@ -1,0 +1,38 @@
+[
+  {
+    "id": "camp-1",
+    "day": "21",
+    "month": "Oct",
+    "title": "General Health Checkup & Fever Triage",
+    "village": "Poosaripatti",
+    "status": "Completed",
+    "badgeClass": "camp-completed",
+    "targetBeneficiaries": 240,
+    "attended": 215,
+    "date": "2026-10-21"
+  },
+  {
+    "id": "camp-2",
+    "day": "25",
+    "month": "Oct",
+    "title": "Water Contamination & Chlorination Drive",
+    "village": "Kallimandayam",
+    "status": "Completed",
+    "badgeClass": "camp-completed",
+    "targetBeneficiaries": 350,
+    "attended": 310,
+    "date": "2026-10-25"
+  },
+  {
+    "id": "camp-3",
+    "day": "28",
+    "month": "Oct",
+    "title": "Anti-Larval & Dengue Fogging Drive",
+    "village": "Ottanchathiram",
+    "status": "Upcoming",
+    "badgeClass": "camp-upcoming",
+    "targetBeneficiaries": 500,
+    "attended": 0,
+    "date": "2026-10-28"
+  }
+]
