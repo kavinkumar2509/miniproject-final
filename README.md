@@ -1,103 +1,152 @@
-# SmartHealth AI — Epidemic Surveillance & Early Warning System (SIH-2025)
+# 🌐 SmartHealth AI — Epidemic Surveillance & Early Warning System
 
-An end-to-end distributed system for health workers to record epidemiological symptoms in the field, predict localized outbreak risks via AI/ML, and view real-time regional surveillance analytics.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/kavinkumar2509/miniproject-final)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Python-009688?logo=fastapi&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.0-47A248?logo=mongodb&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
+
+An end-to-end distributed epidemiological intelligence system designed for healthcare workers, administrators, and field leads to record community symptoms, predict localized outbreak risks using AI/ML, and visualize real-time regional disease surveillance.
+
+---
+
+## ⚡ Live Vercel Deployment
+
+The frontend is fully optimized for **Vercel** with zero-configuration deployments and standalone preview capability:
+
+- **1-Click Deploy**: Import `kavinkumar2509/miniproject-final` in the [Vercel Dashboard](https://vercel.com/new).
+- **Zero Config Needed**: Pre-configured via `vercel.json` with Vite presets, SPA client-side routing, and root build scripts.
+- **Built-in Offline/Demo Fallback**: Even without an active MongoDB/Python ML microservice backend, the live Vercel deployment provides an interactive experience using built-in realistic epidemiological data and heuristics.
+- **Optional Backend Integration**: Connect to an external backend by setting the `VITE_API_URL` environment variable in your Vercel Project Settings (e.g. `https://your-api.onrender.com/api`).
+
+### Deploying via Vercel CLI
+
+```powershell
+# 1. Log in to Vercel
+npx vercel login
+
+# 2. Deploy a preview build
+npx vercel
+
+# 3. Deploy straight to production
+npx vercel --prod
+```
+
+---
+
+## 🔐 Demo Credentials & Access Control
+
+Direct access to sensitive surveillance data requires authentication. Use the credentials below or click the quick-login demo pills on the sign-in page:
+
+| Role | Username | Password | Access Scope |
+|---|---|---|---|
+| **Chief Medical Officer** | `officer` | `health2026` | Full administrative, high-risk quarantine alerts & outbreak controls |
+| **Surveillance Administrator** | `admin` | `admin123` | Complete analytics, field camps, worker deployment & dataset exports |
+| **Field Health Lead** | `kavin` | `kavin123` | Symptom logging, community camp management & local zone monitoring |
 
 ---
 
 ## 🏗️ Architecture & Services
 
+```
+miniproject-final/
+├── Frontend/           # React 18 SPA (Vite, Leaflet Maps, 3D Canvas, Lucide)
+├── backend/            # Express REST API Gateway (Node.js, MongoDB, In-memory fallback)
+├── ml-service/         # Outbreak Risk Scoring Microservice (FastAPI, Scikit-learn, Python)
+├── vercel.json         # Vercel deployment & routing configuration
+├── .vercelignore       # Excludes non-frontend files from Vercel builds
+├── docker-compose.yml  # Multi-container containerized deployment
+└── start_all.ps1       # One-click Windows PowerShell local runner
+```
+
 | Service | Port | Tech Stack | Role |
 |---|---|---|---|
-| **Frontend** | `3000` | React 18/19, Vite, React Router, Leaflet, Canvas 3D | Secure surveillance portal, 3D Globe, clinical maps, analytics & notifications |
-| **Backend API** | `5000` | Node.js, Express, Mongoose, JWT Auth | REST API gateway, database orchestration & ML microservice proxy |
-| **ML Microservice** | `5001` | FastAPI, Python 3.11/3.12, Uvicorn, Scikit-learn, Pandas | AI/ML outbreak risk scoring & cluster assessment |
-| **Database** | `27017` | MongoDB 6.0 + In-memory fallback | Persistent storage for field surveillance logs and notifications |
+| **Frontend** | `3000` | React 18, Vite, Leaflet, 3D Canvas | Secure surveillance dashboard, clinical maps, risk charts & notification center |
+| **Backend API** | `5000` | Node.js, Express, Mongoose, JWT | REST API gateway, database orchestration & ML microservice proxy |
+| **ML Microservice** | `5001` | FastAPI, Python 3.11+, Scikit-learn | Outbreak risk scoring & cluster assessment engine |
+| **Database** | `27017` | MongoDB 6.0 + In-memory fallback | Persistent storage for clinical reports and surveillance logs |
 
 ---
 
-## 🔐 Authentication & Access Control
+## 🌟 Key Features
 
-Direct access to the dashboard is blocked. Users must authenticate via the secure portal:
-
-- **Portal URL**: [http://localhost:3000/login](http://localhost:3000/login)
-- **Demo Credentials**:
-  - **Chief Officer**: `officer` / `health2026`
-  - **Administrator**: `admin` / `admin123`
-  - **Field Lead**: `kavin` / `kavin123`
-  - *(One-click demo credential pills are also built directly into the login screen)*
+- **Real-Time Surveillance Dashboard**: Dynamic metrics showing active cases, population at risk, high-risk containment zones, and village distribution.
+- **Interactive Geospatial Mapping**: Leaflet-powered maps featuring epidemiological cluster points, heatzones, and health camp markers.
+- **AI Outbreak Risk Prediction**: ML model scoring symptom patterns (Acute Watery Diarrhea, Vomiting, Chills, Turbid Water Ingestion) to predict disease outbreak probabilities.
+- **Field Worker & Health Camp Management**: Track active healthcare workers in field zones and schedule medical relief camps.
+- **Dual Runtime Support**: Operates as a full Docker microservice stack locally or as a lightweight standalone web application on Vercel.
 
 ---
 
-## 🐳 Docker Containerization (One-Click Launch)
+## 🐳 Docker Deployment (Full Stack)
 
-You can build and spin up the complete containerized stack using Docker Compose:
+To run the complete containerized stack (Frontend + Backend + ML Service + MongoDB):
 
 ```bash
 docker compose up --build
 ```
 
-This will automatically build and network:
-- `sih-frontend` on port `3000` (Nginx reverse proxy)
-- `sih-backend` on port `5000`
-- `sih-ml-service` on port `5001`
-- `sih-mongodb` on port `27017`
+Access services:
+- **Frontend**: [http://localhost:3000](http://localhost:3000)
+- **Backend API**: [http://localhost:5000](http://localhost:5000)
+- **ML Service**: [http://localhost:5001/docs](http://localhost:5001/docs)
 
-To shut down containers:
+To stop all containers:
 ```bash
 docker compose down
 ```
 
 ---
 
-## 🚀 Local Development (Without Docker)
+## 💻 Local Development (Without Docker)
 
-Launch all 3 services together using the PowerShell helper:
-
+### Option 1: Start All Services via PowerShell Helper
 ```powershell
 .\start_all.ps1
 ```
 
-Or run individually:
+### Option 2: Run Services Individually
 
-### 1. ML Microservice (FastAPI)
-```powershell
-cd ml-service
-.\.venv\Scripts\python.exe -m uvicorn app:app --host 127.0.0.1 --port 5001
-```
+1. **ML Microservice (FastAPI)**
+   ```powershell
+   cd ml-service
+   python -m venv .venv
+   .\.venv\Scripts\activate
+   pip install -r requirements.txt
+   uvicorn app:app --host 127.0.0.1 --port 5001 --reload
+   ```
 
-### 2. Backend (Node.js/Express)
-```powershell
-cd backend
-node src/index.js
-```
+2. **Backend API (Express)**
+   ```powershell
+   cd backend
+   npm install
+   npm run dev
+   ```
 
-### 3. Frontend (React/Vite)
-```powershell
-cd Frontend
-npm run dev
-```
-Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+3. **Frontend (Vite / React)**
+   ```powershell
+   cd Frontend
+   npm install
+   npm run dev
+   ```
+   Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
 ---
 
-## ⚡ Deploying to Vercel
+## ⚙️ Environment Variables
 
-### Option A: Via GitHub (Recommended)
-1. Push this repository to GitHub.
-2. In the [Vercel Dashboard](https://vercel.com/new), import the repository.
-3. Build Settings are preconfigured via `vercel.json` (or set Root Directory to `Frontend`).
-4. (Optional) In Environment Variables, set `VITE_API_URL` to your production backend API URL (if not set, the frontend runs standalone with built-in realistic mock data).
-5. Click **Deploy**.
+| Variable | Location | Default | Description |
+|---|---|---|---|
+| `VITE_API_URL` | Frontend (`.env` or Vercel) | `/api` | Base URL of the backend API (leave blank for standalone demo mode) |
+| `PORT` | Backend (`.env`) | `5000` | Port for the Express server |
+| `MONGO_URI` | Backend (`.env`) | `mongodb://127.0.0.1:27017/smarthealth` | MongoDB connection string |
+| `ML_API_URL` | Backend (`.env`) | `http://localhost:5001/predict` | Endpoint of the FastAPI ML microservice |
+| `JWT_SECRET` | Backend (`.env`) | `smarthealth_secret_key` | Secret key for signing JWT authentication tokens |
 
-### Option B: Via Vercel CLI
-```powershell
-# 1. Login to Vercel
-npx vercel login
+---
 
-# 2. Deploy preview
-npx vercel
+## 📄 License
 
-# 3. Deploy to production
-npx vercel --prod
-```
-
+This project is licensed under the MIT License — created for SIH (Smart India Hackathon).
