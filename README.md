@@ -77,3 +77,27 @@ cd Frontend
 npm run dev
 ```
 Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+
+---
+
+## ⚡ Deploying to Vercel
+
+### Option A: Via GitHub (Recommended)
+1. Push this repository to GitHub.
+2. In the [Vercel Dashboard](https://vercel.com/new), import the repository.
+3. Build Settings are preconfigured via `vercel.json` (or set Root Directory to `Frontend`).
+4. (Optional) In Environment Variables, set `VITE_API_URL` to your production backend API URL (if not set, the frontend runs standalone with built-in realistic mock data).
+5. Click **Deploy**.
+
+### Option B: Via Vercel CLI
+```powershell
+# 1. Login to Vercel
+npx vercel login
+
+# 2. Deploy preview
+npx vercel
+
+# 3. Deploy to production
+npx vercel --prod
+```
+

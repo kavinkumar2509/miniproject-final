@@ -1,0 +1,12 @@
+{
+  "name": "smarthealth-epidemic-surveillance",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SmartHealth AI — Epidemic Surveillance & Early Warning System",
+  "scripts": {
+    "build": "npm --prefix Frontend install && npm --prefix Frontend run build",
+    "dev": "npm --prefix Frontend run dev",
+    "start": "npm --prefix Frontend run dev",
+    "deploy": "npx vercel --prod"
+  }
+}
