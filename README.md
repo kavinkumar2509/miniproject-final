@@ -1,6 +1,6 @@
 # 🌐 SmartHealth AI — Epidemic Surveillance & Early Warning System
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/kavinkumar2509/miniproject-final)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-miniproject--final--i656.vercel.app-success?style=for-the-badge&logo=vercel)](https://miniproject-final-i656.vercel.app)
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
@@ -8,18 +8,21 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-6.0-47A248?logo=mongodb&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
 
+> 🚀 **Live Production URL**: **[https://miniproject-final-i656.vercel.app](https://miniproject-final-i656.vercel.app)**  
+> 🔐 **Secure Portal Login**: **[https://miniproject-final-i656.vercel.app/login](https://miniproject-final-i656.vercel.app/login)**
+
 An end-to-end distributed epidemiological intelligence system designed for healthcare workers, administrators, and field leads to record community symptoms, predict localized outbreak risks using AI/ML, and visualize real-time regional disease surveillance.
 
 ---
 
 ## ⚡ Live Vercel Deployment
 
-The frontend is fully optimized for **Vercel** with zero-configuration deployments and standalone preview capability:
+The application is deployed live and globally accessible 24/7 on Vercel:
 
-- **1-Click Deploy**: Import `kavinkumar2509/miniproject-final` in the [Vercel Dashboard](https://vercel.com/new).
-- **Zero Config Needed**: Pre-configured via `vercel.json` with Vite presets, SPA client-side routing, and root build scripts.
-- **Built-in Offline/Demo Fallback**: Even without an active MongoDB/Python ML microservice backend, the live Vercel deployment provides an interactive experience using built-in realistic epidemiological data and heuristics.
-- **Optional Backend Integration**: Connect to an external backend by setting the `VITE_API_URL` environment variable in your Vercel Project Settings (e.g. `https://your-api.onrender.com/api`).
+- 🌐 **Public Web App**: **[https://miniproject-final-i656.vercel.app](https://miniproject-final-i656.vercel.app)**
+- 🔑 **Instant Access**: Open the link on any browser or phone (works even when your computer is off).
+- 🧪 **Interactive Demo**: Built-in realistic epidemiological data and heuristic risk prediction allow full interaction without needing a local database.
+- 🔄 **Optional Backend**: Connect to your own backend by setting `VITE_API_URL` in Vercel settings.
 
 ### Deploying via Vercel CLI
 
